@@ -109,4 +109,32 @@ class Users_Model extends Model
 		}
 	}
 
+	function undodelete(){
+		$user_id_md5 = $_POST['user_id'];
+		if (isset($_SESSION['csrf_token']) && $_SESSION['csrf_token'] == $_POST['csrf_token'.$user_id_md5]) {
+			$upstmt = $this->db->prepare("UPDATE `users` SET `user_status`='0' WHERE `user_id_md5`='$user_id_md5'");
+			if ( $upstmt->execute() === TRUE ) {
+				return 'SUCCESS';
+			}else{
+				return 'FAILED';
+			}
+		}else{
+			return 'FAILED';
+		}
+	}
+
+	function active(){
+		$user_id_md5 = $_POST['user_id'];
+		if (isset($_SESSION['csrf_token']) && $_SESSION['csrf_token'] == $_POST['csrf_token'.$user_id_md5]) {
+			$upstmt = $this->db->prepare("UPDATE `users` SET `user_status`='1' WHERE `user_id_md5`='$user_id_md5'");
+			if ( $upstmt->execute() === TRUE ) {
+				return 'SUCCESS';
+			}else{
+				return 'FAILED';
+			}
+		}else{
+			return 'FAILED';
+		}
+	}
+
 }

@@ -21,9 +21,9 @@ class Users extends BaseController
 	function save(){
 		$data = $this->model->save();
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('all');
+			$this->redirect('../all');
 		}else{
-			$this->redirect('create');
+			$this->redirect('../create');
 		}
 	}
 
@@ -31,9 +31,9 @@ class Users extends BaseController
 		$data = $this->model->update();
 
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('all');
+			$this->redirect('../all');
 		}else{
-			$this->redirect('all');
+			$this->redirect('../all');
 		}
 	}
 
@@ -41,9 +41,29 @@ class Users extends BaseController
 		$data = $this->model->delete();
 
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('all');
+			$this->redirect('../all');
 		}else{
-			$this->redirect('all');
+			$this->redirect('../all');
+		}
+	}
+
+	function undodelete(){
+		$data = $this->model->undodelete();
+
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all');
+		}else{
+			$this->redirect('../all');
+		}
+	}
+
+	function active(){
+		$data = $this->model->active();
+
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all');
+		}else{
+			$this->redirect('../all');
 		}
 	}
 }

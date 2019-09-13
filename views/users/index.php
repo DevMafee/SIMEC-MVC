@@ -24,12 +24,24 @@
                           foreach ($this->data as $value) {
                             if ($value['user_status']==1) {
                               $status = '<span class="badge badge-success"> Active </span>';
+                              $style = ' style="display:none;" ';
+                              $style_btn = ' style="" ';
+                              $style_active = ' style="display:none;" ';
                             }elseif ($value['user_status']==0) {
                               $status = '<span class="badge badge-warning"> Inactive </span>';
+                              $style = ' style="display:none;" ';
+                              $style_btn = ' style="" ';
+                              $style_active = ' style="" ';
                             }elseif ($value['user_status']==3) {
                               $status = '<span class="badge badge-danger"> Deleted </span>';
+                              $style = ' style="" ';
+                              $style_btn = ' style="display:none;" ';
+                              $style_active = ' style="display:none;" ';
                             }else{
                               $status = '<span class="badge badge-info"> Nothing </span>';
+                              $style = ' style="display:none;" ';
+                              $style_btn = ' style="" ';
+                              $style_active = ' style="display:none;" ';
                             }
                         ?>
                           <tr>
@@ -38,7 +50,18 @@
                             <td class="align-middle"><?php echo $value['user_type']; ?></td>
                             <td class="align-middle"><?php echo $status; ?></td>
                             <td class="align-middle">
-                              <a href="#" class="btn btn-sm btn-icon btn-warning" data-toggle="modal" data-target="#Edit<?php echo $value['user_id']; ?>"><i class="fa fa-pencil"></i> <span class="sr-only">Edit</span></a> <a href="#" class="btn btn-sm btn-icon btn-danger" data-toggle="modal" data-target="#Delete<?php echo $value['user_id']; ?>"><i class="fa fa-trash"></i> <span class="sr-only">Remove</span></a>
+                              <a href="#" class="btn btn-sm btn-icon btn-warning" data-toggle="modal" data-target="#Edit<?php echo $value['user_id']; ?>">
+                                <i class="fa fa-pencil"></i> <span class="sr-only">Edit</span>
+                              </a>
+                              <a href="#" class="btn btn-sm btn-icon btn-info"<?php echo $style; ?> data-toggle="modal" data-target="#Retrive<?php echo $value['user_id']; ?>">
+                                <i class="fa fa-check"></i> <span class="sr-only">Retrive</span>
+                              </a>
+                              <a href="#" class="btn btn-sm btn-icon btn-danger" <?php echo $style_btn; ?> data-toggle="modal" data-target="#Delete<?php echo $value['user_id']; ?>">
+                                <i class="fa fa-trash"></i> <span class="sr-only">Remove</span>
+                              </a>
+                              <a href="#" class="btn btn-sm btn-icon btn-success" <?php echo $style_active; ?> data-toggle="modal" data-target="#Active<?php echo $value['user_id']; ?>">
+                                <i class="fa fa-user"></i> <span class="sr-only">Active</span>
+                              </a>
                             </td>
                           </tr>
 <!-- Edit Modal -->
@@ -107,7 +130,8 @@
     </div>
   </div>
 </div>
-<!-- Edit Modal -->
+
+<!-- Delete Modal -->
 <div class="modal fade" id="Delete<?php echo $value['user_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -137,6 +161,78 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
           <button type="submit" class="btn btn-danger">YES DELETE.</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Retrive Modal -->
+<div class="modal fade" id="Retrive<?php echo $value['user_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Retrive User Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="<?php echo url('users/undodelete'); ?>" method="post" enctype="multipart/form-data">
+        <?php $_SESSION['csrf_token'.$value['user_id_md5']]=md5(rand()); ?>
+        <div class="modal-body">
+          <div class="card card-fluid">
+            <div class="card-body">
+              <input type="hidden" name="user_id" value="<?php echo $value['user_id_md5']; ?>">
+              <input type="hidden" name="csrf_token<?php echo $value['user_id_md5']; ?>" value="<?php echo $_SESSION['csrf_token']; ?>">
+              <fieldset>
+                <div class="row">
+                  <center class="text-info h3">
+                    Retrive <?php echo $value['full_name']; ?> ?
+                  </center>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-info">YES RETRIVE.</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Active Modal -->
+<div class="modal fade" id="Active<?php echo $value['user_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Active User Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="<?php echo url('users/active'); ?>" method="post" enctype="multipart/form-data">
+        <?php $_SESSION['csrf_token'.$value['user_id_md5']]=md5(rand()); ?>
+        <div class="modal-body">
+          <div class="card card-fluid">
+            <div class="card-body">
+              <input type="hidden" name="user_id" value="<?php echo $value['user_id_md5']; ?>">
+              <input type="hidden" name="csrf_token<?php echo $value['user_id_md5']; ?>" value="<?php echo $_SESSION['csrf_token']; ?>">
+              <fieldset>
+                <div class="row">
+                  <center class="text-info h3">
+                    Active <?php echo $value['full_name']; ?> ?
+                  </center>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-info">YES ACTIVE.</button>
         </div>
       </form>
     </div>

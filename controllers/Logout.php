@@ -7,7 +7,7 @@ class Logout extends BaseController
 	{
 		Session::init();
 		Session::destroy();
-		$this->redirect('home');
+		$this->redirect('../home');
 		exit;
 	}
 
