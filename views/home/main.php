@@ -1,24 +1,13 @@
-<header class="masthead text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Build a secure and Atractive Career!</h1>
-        </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
-              </div>
-              <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+
+<header class="masthead text-white text-center" style="overflow: hidden;">
+  <ul class="cb-slideshow">
+      <li><span>Image 01</span><div><h3>S I M E C</h3></div></li>
+      <li><span>Image 02</span><div><h3>SIMEC System Ltd.</h3></div></li>
+      <li><span>Image 03</span><div><h3>W-EB DES-IGN</h3></div></li>
+      <li><span>Image 04</span><div><h3>WE-B DE-VEL-OPM-ENT</h3></div></li>
+      <li><span>Image 05</span><div><h3>E-R-P SOL-UT-ION</h3></div></li>
+      <li><span>Image 06</span><div><h3>TI-ME ATT-END-A-NCE</h3></div></li>
+  </ul>
 </header>
 <!-- Icons Grid -->
   <section class="features-icons bg-light text-center">

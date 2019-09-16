@@ -11,6 +11,11 @@
 	    <link rel="stylesheet" href="<?php echo base_url('site_link'); ?>assets/bootstrap/css/flatpickr.min.css">
 	    <link rel="stylesheet" href="<?php echo base_url('site_link'); ?>assets/bootstrap/css/theme.min.css" data-skin="default">
 	    <!-- <link rel="stylesheet" href="<?php //echo base_url('site_link'); ?>assets/bootstrap/css/theme-dark.min.css" data-skin="dark"> -->
+	    <script>
+	      setTimeout(function() {
+	        $('#hideMe').fadeOut('slow');
+	      }, 5000);
+	    </script>
 	</head>
 	<body>
     	<!-- .app -->

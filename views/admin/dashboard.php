@@ -105,8 +105,8 @@
                       <!-- .list-group-item-body -->
                       <div class="list-group-item-body">
                         <!-- .progress -->
-                        <div class="progress progress-animated bg-transparent rounded-0" data-toggle="tooltip" data-html="true" title='&lt;div class="text-left small"&gt;&lt;i class="fa fa-fw fa-circle text-purple"&gt;&lt;/i&gt; 2065&lt;br&gt;&lt;i class="fa fa-fw fa-circle text-teal"&gt;&lt;/i&gt; 231&lt;br&gt;&lt;i class="fa fa-fw fa-circle text-red"&gt;&lt;/i&gt; 54&lt;/div&gt;'>
-                          <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="73.46140163642832" aria-valuemin="0" aria-valuemax="100" style="width: 73.46140163642832%">
+                        <div class="progress progress-animated bg-transparent rounded-0" data-toggle="tooltip" data-html="true" title='<div class="text-left small"><i class="fa fa-fw fa-circle text-purple"></i> 2065<br><i class="fa fa-fw fa-circle text-teal"></i> 231<br><i class="fa fa-fw fa-circle text-red"></i> 54</div>'>
+                          <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="53.46140163642832" aria-valuemin="0" aria-valuemax="100" style="width: 53.46140163642832%">
                             <span class="sr-only">73.46140163642832% Complete</span>
                           </div>
                           <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="8.217716115261473" aria-valuemin="0" aria-valuemax="100" style="width: 8.217716115261473%">

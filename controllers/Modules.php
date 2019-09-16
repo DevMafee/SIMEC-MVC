@@ -15,11 +15,25 @@ class Modules extends BaseController
 
 	function save(){
 		$data = $this->model->saveData();
+		// print_r($_SESSION);exit;
 		if ( $data == 'SUCCESS' ) {
 			$this->createTable($_SESSION['module']);
-			$this->redirect('all');
+			$this->createController($_SESSION['module'], $_SESSION['module_model']);
+			$this->createModel($_SESSION['module'], $_SESSION['module_model']);
+			$this->createView($_SESSION['module_model']);
+			$_SESSION['module']='';
+			$this->redirect('../all/');
 		}else{
-			$this->redirect('create');
+			$this->redirect('../create/');
+		}
+	}
+
+	function dalete(){
+		$data = $this->model->dalete();
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all/');
+		}else{
+			$this->redirect('../all/');
 		}
 	}
 

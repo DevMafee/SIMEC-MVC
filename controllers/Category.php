@@ -1,0 +1,69 @@
+<?php
+// Category Controller
+class Category extends BaseController
+{
+	
+	function __construct()
+	{
+		parent::__construct();
+		Auth::check();
+	}
+
+	function all(){
+		$this->view->data = $this->model->fetch('categories');
+		$this->view->admin('category/index');
+	}
+
+	function create(){
+		$this->view->admin('category/create');
+	}
+
+	function save(){
+		$data = $this->model->save();
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all/');
+		}else{
+			$this->redirect('../create/');
+		}
+	}
+
+	function update(){
+		$data = $this->model->update();
+
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all/');
+		}else{
+			$this->redirect('../all/');
+		}
+	}
+
+	function delete(){
+		$data = $this->model->delete();
+
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all');
+		}else{
+			$this->redirect('../all');
+		}
+	}
+
+	function undodelete(){
+		$data = $this->model->undodelete();
+
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all');
+		}else{
+			$this->redirect('../all');
+		}
+	}
+
+	function active(){
+		$data = $this->model->active();
+
+		if ( $data == 'SUCCESS' ) {
+			$this->redirect('../all');
+		}else{
+			$this->redirect('../all');
+		}
+	}
+}

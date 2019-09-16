@@ -10,7 +10,7 @@
     </button>
     <div class="dropdown-menu">
       <div class="dropdown-arrow ml-3"></div>
-      <h6 class="dropdown-header d-none d-md-block d-lg-none"> Beni Arisandi </h6>
+      <a class="dropdown-item" href="<?php echo url(''); ?>" target="_blank"><span class="dropdown-icon oi oi-eye"></span> Preview</a>
       <a class="dropdown-item" href="<?php echo url('dashboard/profile'); ?>/<?php echo md5(rand()).md5($_SESSION['user_id']); ?>"><span class="dropdown-icon oi oi-person"></span> Profile</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="<?php echo url('dashboard/changepassword'); ?>/<?php echo md5(rand()).md5($_SESSION['user_id']); ?>"><span class="dropdown-icon oi oi-lock-unlocked"></span> Change Password</a>

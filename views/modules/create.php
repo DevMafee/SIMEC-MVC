@@ -8,6 +8,7 @@
               <div class="col-12 col-lg-12 col-xl-12">
                 <div class="card card-fluid">
                   <div class="card-body">
+                    <?php if(isset($_SESSION['modules_error'])){ echo $_SESSION['modules_error']?'<div id="hideMe" class="alert alert-warning alert-dismissible fade show" role="alert">'.$_SESSION['modules_error'].'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>':''; $_SESSION['modules_error']='';} ?>
                     <form action="<?php echo url('modules/save'); ?>" method="post">
                       <?php $_SESSION['csrf_token']=md5(rand()); ?>
                       <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">

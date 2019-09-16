@@ -5,7 +5,6 @@
 	    <div id="dropdown-aside" class="dropdown-aside collapse">
 	      <div class="pb-3">
 	        <a class="dropdown-item" href="user-profile.html"><span class="dropdown-icon oi oi-person"></span> Profile</a> <a class="dropdown-item" href="auth-signin-v1.html"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
-	        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Help Center</a> <a class="dropdown-item" href="#">Ask Forum</a> <a class="dropdown-item" href="#">Keyboard Shortcuts</a>
 	      </div>
 	    </div>
 	  </header>
@@ -19,7 +18,7 @@
 			if ($_SESSION['user_type']=='Master Admin' || $_SESSION['user_type']=='Super Admin') {
 		?>
 	        <li class="menu-item has-child">
-	          <a href="#" class="menu-link"><span class="menu-icon fa fa-gears"></span> <span class="menu-text">Settings</span></a>
+	          <a href="#" class="menu-link"><span class="menu-icon fa fa-puzzle-piece"></span> <span class="menu-text">Settings</span></a>
 	          <ul class="menu">
 	            <li class="menu-item">
 	              <a href="<?php echo url('modules/create'); ?>" class="menu-link">Make New Module</a>
@@ -55,6 +54,33 @@
 	    	}
 	    ?>
 	        <hr>
+	        <li class="menu-item has-child">
+	          <a href="#" class="menu-link"><span class="menu-icon fa fa-cogs"></span> <span class="menu-text">Posts Management</span></a>
+	          <ul class="menu">
+	            <li class="menu-item has-child">
+	              <a href="#" class="menu-link">Categories</a>
+	              <ul class="menu">
+	                <li class="menu-item">
+	                  <a href="<?php echo url('category/create'); ?>" class="menu-link">Create Category</a>
+	                </li>
+	                <li class="menu-item">
+	                  <a href="<?php echo url('category/all'); ?>" class="menu-link">All Categories</a>
+	                </li>
+	              </ul>
+	            </li>
+	            <li class="menu-item has-child">
+	              <a href="#" class="menu-link">Posts</a>
+	              <ul class="menu">
+	                <li class="menu-item">
+	                  <a href="<?php echo url('posts/create'); ?>" class="menu-link">Create Post</a>
+	                </li>
+	                <li class="menu-item">
+	                  <a href="<?php echo url('posts/all'); ?>" class="menu-link">All Posts</a>
+	                </li>
+	              </ul>
+	            </li>
+	          </ul>
+	        </li>
 	    <?php
 	    	// include('config/functions.php');
 	    	
