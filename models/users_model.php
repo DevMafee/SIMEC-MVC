@@ -7,14 +7,7 @@ class Users_Model extends Model
 	{
 		parent::__construct();
 	}
-
-	function fetch_last_id(){
-		$stmt = $this->db->prepare("SELECT * FROM `users` ORDER BY `user_id` DESC LIMIT 0,1");
-		$stmt->execute();
-		$data = $stmt->fetchAll();
-		return $data;
-	}
-
+	
 	function save(){
 		if (isset($_SESSION['csrf_token']) && $_SESSION['csrf_token'] == $_POST['csrf_token']) {
 			if ( $_POST['full_name'] != '' && $_POST['username'] != '' && $_POST['password'] != '' ) {

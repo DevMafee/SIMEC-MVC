@@ -1,7 +1,6 @@
 <?php
 class Basic
 {
-	
 	function __construct()
 	{
 		if (isset($_GET['url'])) {

@@ -34,6 +34,7 @@ class BaseController
 	public function createTable($table){
 		$tbl_create = "CREATE TABLE IF NOT EXISTS `$table` (
 		  `$table"."_id` int(11) NOT NULL AUTO_INCREMENT,
+		  `$table"."_status` int(2) NOT NULL DEFAULT 1,
 		  `$table"."_date` datetime NOT NULL DEFAULT current_timestamp(),
 		  PRIMARY KEY (`$table"."_id`)
 		)";
@@ -58,30 +59,69 @@ class ".$table." extends BaseController
 	
 	public function index()
 	{
-		//Some Functionalities
+		\$this->view->data = \$this->model->fetchData(".$model_name.");
+		\$this->view->admin('".$model_name."/index');
+	}
+
+	public function all()
+	{
+		\$this->view->data = \$this->model->fetchData(".$model_name.");
 		\$this->view->admin('".$model_name."/index');
 	}
 	
 	public function create()
 	{
-		//Some Functionalities
 		\$this->view->admin('".$model_name."/create');
 	}
 	
-	public function update()
+	public function save()
 	{
-		//Some Functionalities
+		$data = \$this->model->save('".$model_name."');
+		if ( $data == 'SUCCESS' ) {
+			\$this->redirect('all');
+		}else{
+			\$this->redirect('create');
+		}
 	}
 	
-	public function delete()
-	{
-		//Some Functionalities
+	function update(){
+		$data = \$this->model->update('".$model_name."');
+
+		if ( $data == 'SUCCESS' ) {
+			\$this->redirect('all');
+		}else{
+			\$this->redirect('all');
+		}
 	}
 	
-	public function retrive()
-	{
-		//Some Functionalities
+	function dalete(){
+		$data = \$this->model->dalete('".$model_name."');
+		if ( $data == 'SUCCESS' ) {
+			\$this->redirect('all');
+		}else{
+			\$this->redirect('all');
+		}
 	}
+	function undodelete(){
+		$data = \$this->model->undodelete('".$model_name.");
+
+		if ( $data == 'SUCCESS' ) {
+			\$this->redirect('all');
+		}else{
+			\$this->redirect('all');
+		}
+	}
+
+	function active(){
+		$data = \$this->model->active('".$model_name."');
+
+		if ( $data == 'SUCCESS' ) {
+			\$this->redirect('all');
+		}else{
+			\$this->redirect('all');
+		}
+	}
+
 }";
 		fwrite($file, $content);
 		fclose($file);
@@ -105,9 +145,14 @@ class ".$table."_Model extends Model
 		parent::__construct();
 	}
 	
-	public function create()
+	public function save($table)
 	{
-		//Some Functionalities
+		$stmt = $this->db->prepare(\"INSERT INTO `".$table."`(  ) VALUES (  )\");
+		if ( $stmt->execute() === TRUE ) {
+			return 'SUCCESS';
+		}else{
+			return 'FAILED';
+		}
 	}
 	
 }";
@@ -199,10 +244,10 @@ class ".$table."_Model extends Model
 		}
 	}
 
-	public function menu(){
-		$stmt = $this->model->fetchmenu();
-		print_r($stmt);
-		exit;
-	}
+	// public function menu(){
+	// 	$stmt = $this->model->fetchmenu();
+	// 	print_r($stmt);
+	// 	exit;
+	// }
 
 }

@@ -27,13 +27,13 @@
 	              <a href="<?php echo url('modules/all'); ?>" class="menu-link">All Modules</a>
 	            </li>
 	            <li class="menu-item has-child">
-	              <a href="#" class="menu-link">Sub Modules</a>
+	              <a href="#" class="menu-link">Entry Form</a>
 	              <ul class="menu">
 	                <li class="menu-item">
-	                  <a href="page-team.html" class="menu-link">Create Sub Module</a>
+	                  <a href="<?php echo url('fields/create'); ?>" class="menu-link">Create New Field</a>
 	                </li>
 	                <li class="menu-item">
-	                  <a href="page-team-feeds.html" class="menu-link">All Sub Module</a>
+	                  <a href="<?php echo url('fields/find'); ?>" class="menu-link">All Sub Module</a>
 	                </li>
 	              </ul>
 	            </li>

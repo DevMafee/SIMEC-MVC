@@ -9,6 +9,11 @@ class Users extends BaseController
 		Auth::check();
 	}
 
+	function index(){
+		$this->view->data = $this->model->fetch('users');
+		$this->view->admin('users/index');
+	}
+	
 	function all(){
 		$this->view->data = $this->model->fetch('users');
 		$this->view->admin('users/index');
@@ -21,9 +26,9 @@ class Users extends BaseController
 	function save(){
 		$data = $this->model->save();
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('../all');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../create');
+			$this->redirect('create');
 		}
 	}
 
@@ -31,9 +36,9 @@ class Users extends BaseController
 		$data = $this->model->update();
 
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('../all');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../all');
+			$this->redirect('all');
 		}
 	}
 
@@ -41,9 +46,9 @@ class Users extends BaseController
 		$data = $this->model->delete();
 
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('../all');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../all');
+			$this->redirect('all');
 		}
 	}
 
@@ -51,9 +56,9 @@ class Users extends BaseController
 		$data = $this->model->undodelete();
 
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('../all');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../all');
+			$this->redirect('all');
 		}
 	}
 
@@ -61,9 +66,9 @@ class Users extends BaseController
 		$data = $this->model->active();
 
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('../all');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../all');
+			$this->redirect('all');
 		}
 	}
 }

@@ -1,5 +1,5 @@
 
-<header class="masthead text-white text-center" style="overflow: hidden;">
+<header class="masthead text-white text-center" style="overflow: hidden; margin-top: 75px; height: 550px;">
   <ul class="cb-slideshow">
       <li><span>Image 01</span><div><h3>S I M E C</h3></div></li>
       <li><span>Image 02</span><div><h3>SIMEC System Ltd.</h3></div></li>

@@ -22,18 +22,18 @@ class Modules extends BaseController
 			$this->createModel($_SESSION['module'], $_SESSION['module_model']);
 			$this->createView($_SESSION['module_model']);
 			$_SESSION['module']='';
-			$this->redirect('../all/');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../create/');
+			$this->redirect('create');
 		}
 	}
 
 	function dalete(){
 		$data = $this->model->dalete();
 		if ( $data == 'SUCCESS' ) {
-			$this->redirect('../all/');
+			$this->redirect('all');
 		}else{
-			$this->redirect('../all/');
+			$this->redirect('all');
 		}
 	}
 

@@ -1,17 +1,17 @@
 		</div><!-- /.app -->
     <!-- BEGIN BASE JS -->
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/jquery.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/popper.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/bootstrap.min.js"></script> <!-- END BASE JS -->
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/jquery.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/popper.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/bootstrap.min.js"></script> <!-- END BASE JS -->
     <!-- BEGIN PLUGINS JS -->
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/pace.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/stacked-menu.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/perfect-scrollbar.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/flatpickr.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/jquery.easypiechart.min.js"></script>
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/Chart.min.js"></script> <!-- END PLUGINS JS -->
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/pace.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/stacked-menu.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/perfect-scrollbar.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/flatpickr.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/jquery.easypiechart.min.js"></script>
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/Chart.min.js"></script> <!-- END PLUGINS JS -->
     <!-- BEGIN THEME JS -->
-    <script src="<?php echo base_url('site_link'); ?>assets/bootstrap/js/theme.min.js"></script> <!-- END THEME JS -->
+    <script src="<?php echo base_url('site_link'); ?>assets/css/bootstrap/js/theme.min.js"></script> <!-- END THEME JS -->
     <!-- BEGIN PAGE LEVEL JS -->
     <!-- <script src="assets/javascript/pages/dashboard-demo.js"></script> -->
     <script>
