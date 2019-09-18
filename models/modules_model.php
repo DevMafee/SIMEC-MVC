@@ -1,7 +1,5 @@
 <?php
-/**
- * Modules Model
- */
+//Modules Model
 class Modules_Model extends Model
 {
 	
@@ -12,10 +10,11 @@ class Modules_Model extends Model
 
 	public function saveData(){
 		if ( $_POST['modules_name'] != '' && $_POST['modules_rank'] != '' ) {
-			$stmt = $this->db->prepare("INSERT INTO `modules`(`modules_name`, `modules_rank`) VALUES ('$_POST[modules_name]','$_POST[modules_rank]')");
+			$modules_table= strtolower(str_replace(' ', '_', $_POST['modules_name']));
+			$stmt = $this->db->prepare("INSERT INTO `modules`(`modules_name`, `modules_table`, `modules_rank`) VALUES ('$_POST[modules_name]', '$modules_table', '$_POST[modules_rank]')");
 			$stmt->execute();
 			$_SESSION['module']= ucfirst(str_replace(' ', '_', $_POST['modules_name']));
-			$_SESSION['module_model']= str_replace(' ', '_', $_POST['modules_name']);
+			$_SESSION['module_model']= $modules_table;
 			$_SESSION['modules_success']="Successfully Added!";
 			return 'SUCCESS';
 		}elseif( $_POST['modules_name'] == '' &&  $_POST['modules_rank'] == '' ){
@@ -32,31 +31,6 @@ class Modules_Model extends Model
 			$_SESSION['modules_error']="Something Went Wrong!";
 			return 'FAILED';
 		}
-		// Session::init();
-		// if (isset($_SESSION['csrf_token']) && $_SESSION['csrf_token'] == $_POST['csrf_token']) {
-		// 	if ( $_POST['modules_name'] != '' && $_POST['modules_rank'] != '' ) {
-		// 		$stmt = $this->db->prepare("INSERT INTO `modules`(`modules_name`, `modules_rank`) VALUES ('$_POST[modules_name]','$_POST[modules_rank]')");
-		// 		$stmt->execute();
-		// 		$_SESSION['module']=$_POST['modules_name'];
-		// 		return 'SUCCESS';
-		// 	}elseif( $_POST['modules_name'] == '' &&  $_POST['modules_rank'] == '' ){
-		// 		$_SESSION['modules_name']="Module Name Can not Empty";
-		// 		$_SESSION['modules_rank']="Module Rank Can not Empty";
-		// 		return 'FAILED';
-		// 	}elseif( $_POST['modules_name'] == '' ){
-		// 		$_SESSION['modules_name']="Module Name Can not Empty!";
-		// 		return 'FAILED';
-		// 	}elseif( $_POST['modules_rank'] == '' ){
-		// 		$_SESSION['modules_rank']="Module Rank Can not Empty!";
-		// 		return 'FAILED';
-		// 	}else{
-		// 		$_SESSION['modules_error']="Something Went Wrong!";
-		// 		return 'FAILED';
-		// 	}
-		// }else{
-		// 	$_SESSION['modules_error']="Session Problem!";
-		// 	return 'FAILED';
-		// }
 	}
 
 	public function fetchData(){

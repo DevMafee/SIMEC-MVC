@@ -33,7 +33,7 @@
 	                  <a href="<?php echo url('fields/create'); ?>" class="menu-link">Create New Field</a>
 	                </li>
 	                <li class="menu-item">
-	                  <a href="<?php echo url('fields/find'); ?>" class="menu-link">All Sub Module</a>
+	                  <a href="<?php echo url('fields/find'); ?>" class="menu-link">All Fields</a>
 	                </li>
 	              </ul>
 	            </li>

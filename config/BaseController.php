@@ -145,9 +145,19 @@ class ".$table."_Model extends Model
 		parent::__construct();
 	}
 	
+	public function findformID($table){
+		$stmt = \$this->db->prepare(\"SELECT `modules_id` FROM `modules` WHERE `modules_table`='$table'\");
+		$stmt->execute();
+		$data = $stmt->fetchAll();
+		return $data;
+	}
 	public function save($table)
 	{
-		$stmt = $this->db->prepare(\"INSERT INTO `".$table."`(  ) VALUES (  )\");
+		$fields = '';
+		$formId = \$this->model->findformID($table);
+		$sql = 
+		$fields .= '``';
+		$stmt = \$this->db->prepare(\"INSERT INTO `".$table."`(  ) VALUES (  )\");
 		if ( $stmt->execute() === TRUE ) {
 			return 'SUCCESS';
 		}else{
