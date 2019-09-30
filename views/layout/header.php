@@ -16,4 +16,4 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('site_link'); ?>assets/slider/css/style2.css" />
 		<script type="text/javascript" src="<?php echo base_url('site_link'); ?>assets/slider/js/modernizr.custom.86080.js"></script>
 	</head>
-	<body>
+	<body style="background-color: #fff;">

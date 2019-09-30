@@ -9,10 +9,8 @@ class Auth
 	}
 	public function check(){
 		Session::init();
-		$logged = Session::get('loggedIn');
-		if ($logged == false) {
+		if (Session::get('loggedIn') == false) {
 			header('location: '.url('login'));
-			exit;
 		}
 	}
 

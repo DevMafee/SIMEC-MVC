@@ -47,25 +47,115 @@
   <!-- Image Showcases -->
   <section class="showcase">
     <div class="container-fluid p-0">
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<?php echo base_url('site_link'); ?>assets/frontend/img/bg-showcase-1.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Fully Responsive Design</h2>
-          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+      <div class="row no-gutters mt-5 mb-5">
+        <div class="col-lg-4 order-lg-1">
+          <div class="card" style="width: 100%; padding: 20px; text-align: center; border:none; border-right: 2px solid #CCC;">
+            <h4>Some quick example text</h4>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item hover-zoom-in">Cras justo odio</li>
+                <li class="list-group-item hover-zoom-in">Dapibus ac facilisis in</li>
+                <li class="list-group-item hover-zoom-in">Vestibulum at eros</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 order-lg-2">
+          <div class="card" style="width: 100%; padding: 20px; text-align: center; border:none; border-right: 1px solid #CCC; border-left: 1px solid #CCC;">
+            <h4>Some quick example text</h4>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item hover-zoom-in">Cras justo odio</li>
+                <li class="list-group-item hover-zoom-in">Dapibus ac facilisis in</li>
+                <li class="list-group-item hover-zoom-in">Vestibulum at eros</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 order-lg-3">
+          <div class="card" style="width: 100%; padding: 20px; text-align: center; border:none; border-left: 2px solid #CCC;">
+            <h4>Some quick example text</h4>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item hover-zoom-in">Cras justo odio</li>
+                <li class="list-group-item hover-zoom-in">Dapibus ac facilisis in</li>
+                <li class="list-group-item hover-zoom-in">Vestibulum at eros</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row no-gutters">
+      <div class="row no-gutters bg-light">
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('<?php echo base_url('site_link'); ?>assets/frontend/img/bg-showcase-2.jpg');"></div>
         <div class="col-lg-6 my-auto showcase-text">
           <h2>Updated For Bootstrap 4</h2>
           <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
         </div>
       </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<?php echo base_url('site_link'); ?>assets/frontend/img/bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Customize</h2>
-          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+      <div class="row no-gutters mt-5 mb-5">
+        <div class="col-lg-3 order-lg-1">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/time_attendance.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">Time Attendance</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-2">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/custom_solution.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">ERP Solution</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-3">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/software-solution.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">Cloud Base Software Solution</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-4">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/web_develop.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">Web Development</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

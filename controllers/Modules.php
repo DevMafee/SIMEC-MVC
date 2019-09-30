@@ -15,7 +15,6 @@ class Modules extends BaseController
 
 	function save(){
 		$data = $this->model->saveData();
-		// print_r($_SESSION);exit;
 		if ( $data == 'SUCCESS' ) {
 			$this->createTable(strtolower($_SESSION['module_model']));
 			$this->createController($_SESSION['module'], $_SESSION['module_model']);

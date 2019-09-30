@@ -33,7 +33,7 @@
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      <a class="btn <?php echo Session::get('loggedIn')==true?'btn-outline-danger':'btn-outline-info'; ?> m-2 my-sm-0" href="<?php echo Session::get('loggedIn')==true?url('logout'):url('login'); ?>"><?php echo Session::get('loggedIn')==true?'Logout':'Login'; ?></a>
+      <a class="btn <?php echo Session::get('loggedIn')==true?'btn-outline-danger':'btn-outline-info'; ?> m-2 my-sm-0" href="<?php echo url('login'); ?>"><?php echo 'Login'; ?></a>
     </form>
   </div>
 </nav>

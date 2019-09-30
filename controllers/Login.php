@@ -8,7 +8,7 @@ class Login extends BaseController
 		Session::init();
 		$logged = Session::get('loggedIn');
 		if ($logged == true) {
-			$this->redirect("../dashboard");
+			$this->redirect("./dashboard");
 			exit;
 		}
 	}
