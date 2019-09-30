@@ -57,6 +57,9 @@
                 <li class="list-group-item hover-zoom-in">Dapibus ac facilisis in</li>
                 <li class="list-group-item hover-zoom-in">Vestibulum at eros</li>
               </ul>
+              <a class="btn btn-success mt-2" style="color: white;" href="#">
+                Order Now <span class="badge badge-light"><i class="fas fa-cart-plus"></i></span>
+              </a>
             </div>
           </div>
         </div>
@@ -69,6 +72,9 @@
                 <li class="list-group-item hover-zoom-in">Dapibus ac facilisis in</li>
                 <li class="list-group-item hover-zoom-in">Vestibulum at eros</li>
               </ul>
+              <a class="btn btn-info mt-2" style="color: white;" href="#">
+                Order Now <span class="badge badge-warning"><i class="fas fa-cart-plus"></i></span>
+              </a>
             </div>
           </div>
         </div>
@@ -81,6 +87,9 @@
                 <li class="list-group-item hover-zoom-in">Dapibus ac facilisis in</li>
                 <li class="list-group-item hover-zoom-in">Vestibulum at eros</li>
               </ul>
+              <a class="btn btn-success mt-2" style="color: white;" href="#">
+                Order Now <span class="badge badge-light"><i class="fas fa-cart-plus"></i></span>
+              </a>
             </div>
           </div>
         </div>

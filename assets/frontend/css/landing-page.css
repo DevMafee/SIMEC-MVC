@@ -18,6 +18,10 @@ h6 {
   font-weight: 700;
 }
 
+.list-group-item{
+  border:none !important;
+}
+
 /* Zoom Hover */
 .hover-zoom-in{
   transition: transform .2s;
