@@ -13,31 +13,38 @@
   <section class="features-icons bg-light text-center">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 hover-zoom-in">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+            <div class="features-icons-icon d-flex mb-2">
+              <!-- <i class="icon-screen-desktop m-auto text-primary"></i> -->
+              <img src="<?php echo base_url('site_link'); ?>assets/images/responsive-web.png" class="responsive-border">
             </div>
-            <h3>Fully Responsive</h3>
-            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+            <h3 style="font-size: 20px; font-weight: bold;" class="mt-5">Fully Responsive <br>
+              <span class="text-success" style="font-size: 18px;">Web development and design solutions<span>
+            </h3>
+            <p class="lead mb-0" style="font-size: 14px;">SIMEC has wide experience in custom software development and creating user-specific software applications based upon individual requirements. Get a best Web development and design solutions and services.</p>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 box-shadow bg-warning hover-zoom-in">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+            <div class="features-icons-icon d-flex mb-2">
+              <!-- <i class="icon-layers m-auto text-success"></i> -->
+              <img src="<?php echo base_url('site_link'); ?>assets/images/erp-solution.png" class="responsive-no-border">
             </div>
-            <h3>Bootstrap 4 Ready</h3>
-            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+            <h3 style="font-size: 20px; font-weight: bold;" class="mt-5">ERP - For Business Automation</h3>
+            <p class="lead mb-0 text-white" style="font-size: 14px;">Businesses with more than a handful of employees have a lot to balance including pricing, product planning, accounting and finance, managing payroll, dealing with inventory, and more. Stitching together a set of disparate tools to handle those jobs is a quick, cheap, and dirty way to get things done.</p>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 hover-zoom-in">
           <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
+            <div class="features-icons-icon d-flex mb-2">
+              <!-- <i class="icon-check m-auto text-primary"></i> -->
+              <img src="<?php echo base_url('site_link'); ?>assets/images/pos-system.jpg" class="responsive-border">
             </div>
-            <h3>Easy to Use</h3>
-            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+            <h3 style="font-size: 20px; font-weight: bold;" class="mt-5">POS System | POS Software<br>
+              <span class="text-success" style="font-size: 18px;">Online Point of Sale Software for Retail<span>
+            </h3>
+            <p class="lead mb-0" style="font-size: 14px;">Grocery POS systems are point of sale software and hardware tools that enable users to automate some or all of the checkout process. Grocery stores have a difficult combination of high-volume sales and an inventory that largely consists of perishable goods.</p>
           </div>
         </div>
       </div>
@@ -151,6 +158,70 @@
           </div>
         </div>
         <div class="col-lg-3 order-lg-4">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/web_develop.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">Web Development</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-5">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/time_attendance.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">Time Attendance</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-6">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/custom_solution.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">ERP Solution</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-7">
+          <div class="card" style="border:none; padding: 10px;">
+            <div class="card-body">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="<?php echo base_url('site_link'); ?>assets/images/software-solution.png" style="padding: 5px; width:100%; height: 100%;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2 style="margin-top: 80px; font-size: 22px;">Cloud Base Software Solution</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 order-lg-8">
           <div class="card" style="border:none; padding: 10px;">
             <div class="card-body">
               <div class="flip-box">

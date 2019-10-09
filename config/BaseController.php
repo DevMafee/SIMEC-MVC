@@ -76,8 +76,8 @@ class ".$table." extends BaseController
 	
 	public function save()
 	{
-		$data = \$this->model->save('".$model_name."');
-		if ( $data == 'SUCCESS' ) {
+		\$data = \$this->model->save('".$model_name."');
+		if ( \$data == 'SUCCESS' ) {
 			\$this->redirect('all');
 		}else{
 			\$this->redirect('create');
@@ -85,9 +85,9 @@ class ".$table." extends BaseController
 	}
 	
 	function update(){
-		$data = \$this->model->update('".$model_name."');
+		\$data = \$this->model->update('".$model_name."');
 
-		if ( $data == 'SUCCESS' ) {
+		if ( \$data == 'SUCCESS' ) {
 			\$this->redirect('all');
 		}else{
 			\$this->redirect('all');
@@ -95,17 +95,17 @@ class ".$table." extends BaseController
 	}
 	
 	function dalete(){
-		$data = \$this->model->dalete('".$model_name."');
-		if ( $data == 'SUCCESS' ) {
+		\$data = \$this->model->dalete('".$model_name."');
+		if ( \$data == 'SUCCESS' ) {
 			\$this->redirect('all');
 		}else{
 			\$this->redirect('all');
 		}
 	}
 	function undodelete(){
-		$data = \$this->model->undodelete('".$model_name.");
+		\$data = \$this->model->undodelete('".$model_name."');
 
-		if ( $data == 'SUCCESS' ) {
+		if ( \$data == 'SUCCESS' ) {
 			\$this->redirect('all');
 		}else{
 			\$this->redirect('all');
@@ -113,9 +113,9 @@ class ".$table." extends BaseController
 	}
 
 	function active(){
-		$data = \$this->model->active('".$model_name."');
+		\$data = \$this->model->active('".$model_name."');
 
-		if ( $data == 'SUCCESS' ) {
+		if ( \$data == 'SUCCESS' ) {
 			\$this->redirect('all');
 		}else{
 			\$this->redirect('all');
@@ -145,20 +145,20 @@ class ".$table."_Model extends Model
 		parent::__construct();
 	}
 	
-	public function findformID($table){
-		$stmt = \$this->db->prepare(\"SELECT `modules_id` FROM `modules` WHERE `modules_table`='$table'\");
-		$stmt->execute();
-		$data = $stmt->fetchAll();
-		return $data;
+	public function findformID(\$table){
+		\$stmt = \$this->db->prepare(\"SELECT `modules_id` FROM `modules` WHERE `modules_table`='$model_name'\");
+		\$stmt->execute();
+		\$data = \$stmt->fetchAll();
+		return \$data;
 	}
-	public function save($table)
+	public function save(\$table)
 	{
-		$fields = '';
-		$formId = \$this->model->findformID($table);
-		$sql = 
-		$fields .= '``';
-		$stmt = \$this->db->prepare(\"INSERT INTO `".$table."`(  ) VALUES (  )\");
-		if ( $stmt->execute() === TRUE ) {
+		\$fields = '';
+		\$formId = \$this->model->findformID($table);
+		\$sql = 
+		\$fields .= '``';
+		\$stmt = \$this->db->prepare(\"INSERT INTO `".$model_name."`(  ) VALUES (  )\");
+		if ( \$stmt->execute() === TRUE ) {
 			return 'SUCCESS';
 		}else{
 			return 'FAILED';

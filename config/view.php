@@ -9,14 +9,14 @@ class View
 		// echo "SALMAN FROM VIEW";
 	}
 
-	function load($file){
+	function load($file, $data=[]){
 		require 'views/layout/header.php';
 		require 'views/layout/navbar.php';
 		require 'views/'.$file.'.php';
 		require 'views/layout/footer.php';
 	}
 
-	function admin($file){
+	function admin($file, $data=[]){
 		require 'views/layout/admin/header.php';
 		require 'views/layout/admin/topbar.php';
 		require 'views/layout/admin/sidebar.php';
